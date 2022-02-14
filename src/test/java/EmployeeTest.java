@@ -11,13 +11,13 @@ public class EmployeeTest {
 
     @BeforeEach
     public void beforeEach(){
-        testObject = new Employee("Felicia");
+        testObject = new Employee("Feli","Monti",25,1008,28000);
     }
 
     @Test
     public void getFirstNameTest(){
         String actual = testObject.getFirstName();
-        assertEquals("Felicia",actual);
+        assertEquals("Feli",actual);
     }
 
 
