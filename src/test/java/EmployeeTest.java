@@ -11,7 +11,7 @@ public class EmployeeTest {
 
     @BeforeEach
     public void beforeEach(){
-        testObject = new Employee();
+        testObject = new Employee("Felicia");
     }
 
     @Test
@@ -19,5 +19,7 @@ public class EmployeeTest {
         String actual = testObject.getFirstName();
         assertEquals("Felicia",actual);
     }
+
+
 
 }
