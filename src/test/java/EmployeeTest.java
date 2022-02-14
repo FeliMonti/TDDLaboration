@@ -11,7 +11,7 @@ public class EmployeeTest {
 
     @BeforeEach
     public void beforeEach(){
-        testObject = new Employee("Feli","Monti",25,1008,28000);
+        testObject = new Employee("Feli","Monti",25,28000);
     }
 
     @Test
@@ -23,6 +23,12 @@ public class EmployeeTest {
     @Test
     public void getLastNameTest(){
         String actual = testObject.getLastName();
+        assertEquals("Monti",actual);
     }
 
+    @Test
+    public void getIDTest(){
+        int actual = testObject.getID();
+
+    }
 }
