@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class EmployeeTest {
 
@@ -8,6 +9,12 @@ public class EmployeeTest {
 
     @BeforeEach
     public void beforeEach(){
-
+        testObject = new Employee();
     }
+
+    @Test
+    public void getFirstNameTest(){
+        String actual = testObject.getFirstName();
+    }
+
 }
