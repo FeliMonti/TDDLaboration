@@ -15,11 +15,14 @@ public class EmployeeTest {
     }
 
     @Test
-    public void getFirstNameTest(){
-        String actual = testObject.getFirstName();
-        assertEquals("Feli",actual);
+    public void getFirstNameTest(){             //när man ska testa getter, måste man har antingen en
+        String actual = testObject.getFirstName(); //set metod eller en konstruktor, om man ska testa
+        assertEquals("Feli",actual);    //en setter då man ha en get metod i klassen
     }
 
-
+    @Test
+    public void getLastNameTest(){
+        String actual = testObject.getLastName();
+    }
 
 }
