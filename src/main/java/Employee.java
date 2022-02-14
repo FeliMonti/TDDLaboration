@@ -4,7 +4,7 @@ public class Employee {
     private String lastName;
     private int age;
     private int ID;
-    private int salary;
+    private float salary;
 
     public Employee(String firstName,String lastName,int age,float salary){
         this.firstName = firstName;
@@ -18,5 +18,9 @@ public class Employee {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public int getID() {
+        return ID;
     }
 }
