@@ -31,13 +31,13 @@ public class EmployeeTest {
     @Test
     public void getAgeTest(){
         int actual = testObject.getAge();
+        assertEquals(25,actual);
     }
 
     @Test
     public void getIDTest(){
         int actual = testObject.getID();
         assertEquals(1,actual);
-
     }
 
     @Test
@@ -46,4 +46,10 @@ public class EmployeeTest {
         assertEquals(2,actual);
         assertNotEquals(testObject.getID(),testObject2.getID());
     }
+
+    @Test
+    public void getSalaryTest(){
+        float actual = testObject.getSalary();
+    }
+
 }
