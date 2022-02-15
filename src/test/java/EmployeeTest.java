@@ -29,6 +29,11 @@ public class EmployeeTest {
     }
 
     @Test
+    public void getAgeTest(){
+        int actual = testObject.getAge();
+    }
+
+    @Test
     public void getIDTest(){
         int actual = testObject.getID();
         assertEquals(1,actual);
