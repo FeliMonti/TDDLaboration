@@ -32,5 +32,7 @@ public class Employee {
         return ID;
     }
 
-
+    public float getSalary() {
+        return salary;
+    }
 }
