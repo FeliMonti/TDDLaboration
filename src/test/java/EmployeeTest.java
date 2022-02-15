@@ -12,7 +12,7 @@ public class EmployeeTest {
 
     @BeforeEach
     public void beforeEach(){
-        testObject = new Employee("Feli","Monti",25,28000);
+        testObject = new Employee("Feli","Monti",25,38000);
         testObject2 = new Employee("Juhee","Kang",25,50000);
     }
 
@@ -50,6 +50,7 @@ public class EmployeeTest {
     @Test
     public void getSalaryTest(){
         float actual = testObject.getSalary();
+        assertEquals(38000,actual);
     }
 
 }
