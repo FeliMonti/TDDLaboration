@@ -8,10 +8,12 @@ public class EmployeeTest {
     private Employee employee;
 
     Employee testObject;
+    Employee testObject2;
 
     @BeforeEach
     public void beforeEach(){
         testObject = new Employee("Feli","Monti",25,28000);
+        testObject2 = new Employee("Juhee","Kang",25,50000);
     }
 
     @Test
@@ -31,5 +33,12 @@ public class EmployeeTest {
         int actual = testObject.getID();
         assertEquals(1,actual);
 
+    }
+
+    @Test
+    public void getIDIncrementTest(){
+        int actual = testObject2.getID();
+        assertEquals(2,actual);
+        assertNotEquals(testObject.getID(),testObject2.getID());
     }
 }
