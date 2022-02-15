@@ -24,7 +24,13 @@ public class Employee {
         return lastName;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public int getID() {
         return ID;
     }
+
+
 }
