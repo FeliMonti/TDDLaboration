@@ -53,6 +53,9 @@ public class EmployeeTest {
         assertEquals(38000,actual);
     }
 
-
+    @Test
+    public void setFirstName(){
+        String actual = testObject.setFirst();
+    }
 
 }
