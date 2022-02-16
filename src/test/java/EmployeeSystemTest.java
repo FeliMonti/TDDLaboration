@@ -12,13 +12,13 @@ public class EmployeeSystemTest {
 
     @BeforeEach
     public void beforeEach(){
-        employeeSystem = new EmployeeSystem();
+        testObject = new EmployeeSystem();     //TestObject = EmployeeSystem
     }
 
     @Test
     public void addNewEmployeeTest(){
-        String newEmployee = "Tim";
-        testObject.addNewEmployee();
+        Employee newEmployee = new Employee("Tim","Tom",35,35000);
+        testObject.addNewEmployee(newEmployee);
 
     }
 }
