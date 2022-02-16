@@ -24,12 +24,16 @@ public class Employee {
         return firstName;
     }
 
-    public void setLastName(String myLastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
     public String getLastName() {
         return lastName;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public int getAge() {
