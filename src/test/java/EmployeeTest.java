@@ -66,7 +66,14 @@ public class EmployeeTest {
     public void setLastName(){
         String myLastName = "Loo";
         testObject.setLastName(myLastName);
+        assertEquals(myLastName,testObject.getLastName());
+        // System.out.println(testObject.getLastName());
+    }
 
+    @Test
+    public void setAgeTest(){
+        int myAge = 45;
+        testObject.setAge(myAge);
     }
 
 }
