@@ -77,4 +77,9 @@ public class EmployeeTest {
         assertEquals(myAge,testObject.getAge());
     }
 
+    @Test
+    public void setSalaryTest(){
+        float mySalary = 36000;
+        testObject.setSalary(mySalary);
+    }
 }
