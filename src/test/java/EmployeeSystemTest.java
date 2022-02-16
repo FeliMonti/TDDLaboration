@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -19,6 +21,8 @@ public class EmployeeSystemTest {
     public void addNewEmployeeTest(){
         Employee newEmployee = new Employee("Tim","Tom",35,35000);
         testObject.addNewEmployee(newEmployee);
+        //System.out.println(newEmployee.getID());
+        ArrayList<Employee> newEmployed = employeeSystem.getNewEmployee();
 
     }
 }
