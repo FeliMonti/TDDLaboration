@@ -62,4 +62,10 @@ public class EmployeeTest {
        // System.out.println(testObject.getFirstName());
     }
 
+    @Test
+    public void setLastName(){
+        String myLastName = "Loo";
+        testObject.setLastName(myLastName);
+    }
+
 }
