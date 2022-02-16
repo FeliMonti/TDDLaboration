@@ -66,6 +66,7 @@ public class EmployeeTest {
     public void setLastName(){
         String myLastName = "Loo";
         testObject.setLastName(myLastName);
+
     }
 
 }

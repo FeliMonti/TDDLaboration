@@ -24,6 +24,10 @@ public class Employee {
         return firstName;
     }
 
+    public void setLastName(String myLastName) {
+        this.lastName = lastName;
+    }
+
     public String getLastName() {
         return lastName;
     }
@@ -39,6 +43,7 @@ public class Employee {
     public float getSalary() {
         return salary;
     }
+
 
 
 }
