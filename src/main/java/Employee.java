@@ -16,6 +16,10 @@ public class Employee {
         ID = IDCounter;
 
     }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -35,4 +39,6 @@ public class Employee {
     public float getSalary() {
         return salary;
     }
+
+
 }
