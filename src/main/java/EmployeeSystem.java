@@ -6,10 +6,10 @@ public class EmployeeSystem {
 
     public void addNewEmployee(Employee newEmployee){
         this.addNewEmployee.add(newEmployee);
-
     }
 
-    /*public static final Arraylist<> getNewEmployee = new String[]{
+    public ArrayList<Employee> getNewEmployee() {
+        return addNewEmployee;
+    }
 
-    };*/
 }
