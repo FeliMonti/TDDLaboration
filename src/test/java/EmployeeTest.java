@@ -81,5 +81,6 @@ public class EmployeeTest {
     public void setSalaryTest(){
         float mySalary = 36000;
         testObject.setSalary(mySalary);
+        assertEquals(mySalary,testObject.getSalary());
     }
 }
