@@ -1,4 +1,3 @@
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -55,7 +54,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void setFirstName(){
+    public void setFirstNameTest(){
         String myFirstName = "Tiger";
         testObject.setFirstName(myFirstName);
         assertEquals(myFirstName,testObject.getFirstName());
@@ -63,7 +62,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void setLastName(){
+    public void setLastNameTest(){
         String myLastName = "Loo";
         testObject.setLastName(myLastName);
         assertEquals(myLastName,testObject.getLastName());
