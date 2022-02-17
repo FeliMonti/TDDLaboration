@@ -28,8 +28,9 @@ public class EmployeeSystemTest {
         assertEquals("Tom",newEmployed.get(0).getLastName());
         assertEquals(35,newEmployed.get(0).getAge());
         assertEquals(35000,newEmployed.get(0).getSalary());
-        //System.out.println(newEmployee.getFirstName());
-
         //newEmployed.forEach(value -> System.out.println(value.getFirstName()));
     }
+
+    @
+
 }
