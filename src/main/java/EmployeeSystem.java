@@ -16,10 +16,10 @@ public class EmployeeSystem {
         this.employeeList.remove(newEmployee);
     }
 
-    public double salaryRaise(double raiseInPercentage) {
+    public double salaryYearlyIncrement(double incrementInPercentage) {
         float salary = 35000;
-        double newRaisedSalary = salary * raiseInPercentage / 100;
-        return newRaisedSalary;
+        double newSalary = salary * incrementInPercentage / 100;
+        return newSalary;
     }
 
 

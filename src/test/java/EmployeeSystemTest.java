@@ -47,10 +47,11 @@ public class EmployeeSystemTest {
         }
 
     @Test
-    public void salaryRaiseTest(){
-        double actualRaise = testObject.salaryRaise(10);
-        assertEquals(3500,actualRaise);
+    public void salaryYearlyIncrementTest(){
+        double actualIncrement = testObject.salaryYearlyIncrement(10);
+        assertEquals(3500,actualIncrement);
     }
+
 
 }
 
