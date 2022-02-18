@@ -15,4 +15,15 @@ public class EmployeeSystem {
     public void removeEmployee(Employee newEmployee) {
         this.employeeList.remove(newEmployee);
     }
+
+    public double salaryRaise(double raiseInPercentage) {
+        float salary = 35000;
+        double newRaisedSalary = salary * raiseInPercentage / 100;
+        return newRaisedSalary;
+    }
+
+
+
+
+
 }

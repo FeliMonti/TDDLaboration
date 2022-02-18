@@ -47,9 +47,9 @@ public class EmployeeSystemTest {
         }
 
     @Test
-    public void salaryIncrementTest(){
-        Employee newEmployee = new Employee("Tim","Tom",35,35000);
-        testObject.salaryIncrement(newSalary);
+    public void salaryRaiseTest(){
+        double actualRaise = testObject.salaryRaise(10);
+        assertEquals(3500,actualRaise);
     }
 
 }
