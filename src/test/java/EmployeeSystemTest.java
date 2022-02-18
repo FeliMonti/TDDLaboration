@@ -52,7 +52,10 @@ public class EmployeeSystemTest {
         assertEquals(3500,actualIncrement);
     }
 
-
+    @Test
+    public void salaryRaiseByIndividualTest(){
+        testObject.salaryRaiseByIndividual();
+    }
 }
 
 
