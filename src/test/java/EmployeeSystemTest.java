@@ -45,6 +45,13 @@ public class EmployeeSystemTest {
         testObject.removeEmployee(newEmployee1);
         assertEquals("Tim",newEmployed.get(1).getFirstName());
         }
+
+    @Test
+    public void salaryIncrementTest(){
+        Employee newEmployee = new Employee("Tim","Tom",35,35000);
+        testObject.salaryIncrement(newSalary);
     }
+
+}
 
 
