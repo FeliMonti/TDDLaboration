@@ -55,6 +55,7 @@ public class EmployeeSystemTest {
     @Test
     public void salaryRaiseForIndividualTest(){
         testObject.salaryRaiseForIndividual();
+
     }
 }
 
