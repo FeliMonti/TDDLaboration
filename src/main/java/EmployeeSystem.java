@@ -22,7 +22,7 @@ public class EmployeeSystem {
         return newSalary;
     }
 
-    public void salaryRaiseByIndividual() {
+    public void salaryRaiseForIndividual() {
 
     }
 }

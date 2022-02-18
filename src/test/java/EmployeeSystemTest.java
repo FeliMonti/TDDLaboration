@@ -53,8 +53,8 @@ public class EmployeeSystemTest {
     }
 
     @Test
-    public void salaryRaiseByIndividualTest(){
-        testObject.salaryRaiseByIndividual();
+    public void salaryRaiseForIndividualTest(){
+        testObject.salaryRaiseForIndividual();
     }
 }
 
