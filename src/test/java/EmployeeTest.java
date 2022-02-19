@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EmployeeTest {
 
-    private Employee employee;
-
     Employee testObject;
     Employee testObject2;
 
@@ -17,9 +15,9 @@ public class EmployeeTest {
     }
 
     @Test
-    public void getFirstNameTest(){             //när man ska testa getter, måste man har antingen en
+    public void getFirstNameTest(){             //att testa getter, måste man har antingen en
         String actual = testObject.getFirstName(); //set metod eller en konstruktor, om man ska testa
-        assertEquals("Feli",actual);    //en setter då man ha en get metod i klassen
+        assertEquals("Feli",actual);    //en setter då måste man ha en get metod i klassen
     }
 
     @Test
@@ -58,7 +56,7 @@ public class EmployeeTest {
         String myFirstName = "Tiger";
         testObject.setFirstName(myFirstName);
         assertEquals(myFirstName,testObject.getFirstName());
-       // System.out.println(testObject.getFirstName());
+        System.out.println(testObject.getFirstName());
     }
 
     @Test

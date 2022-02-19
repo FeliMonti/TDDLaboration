@@ -20,7 +20,13 @@ public class EmployeeSystemTest {
     public void addNewEmployeeTest(){
         Employee newEmployee = new Employee("Tim","Tom",35,35000);
         testObject.addNewEmployee(newEmployee);
-        System.out.println(newEmployee.getID()); // alternativ newEmployed.forEach(value -> System.out.println(value.getFirstName()));
+        Employee newEmployee1 = new Employee("Samantha","Tester", 33, 40000);
+        testObject.addNewEmployee(newEmployee1);
+        Employee newEmployee2 = new Employee("Mary","Poppin", 40, 50000);
+        testObject.addNewEmployee(newEmployee2);
+        System.out.println(newEmployee.getFirstName()); // alternativ newEmployed.forEach(value -> System.out.println(value.getFirstName()));
+        System.out.println(newEmployee1.getFirstName());
+        System.out.println(newEmployee2.getFirstName());
         ArrayList<Employee> newEmployed = testObject.getNewEmployee();
         assertEquals("Tim",newEmployed.get(0).getFirstName());
         assertEquals("Tom",newEmployed.get(0).getLastName());
@@ -44,6 +50,8 @@ public class EmployeeSystemTest {
         ArrayList<Employee> newEmployed = testObject.getNewEmployee();
         testObject.removeEmployee(newEmployee1);
         assertEquals("Tim",newEmployed.get(1).getFirstName());
+        System.out.println(" ");
+        System.out.println(newEmployed.get(1).getFirstName());
         }
 
     @Test
@@ -54,7 +62,14 @@ public class EmployeeSystemTest {
 
     @Test
     public void salaryRaiseForIndividualTest(){
-        testObject.salaryRaiseForIndividual();
+        Employee newEmployee = new Employee("Samantha","Tester", 33, 40000);
+        testObject.addNewEmployee(newEmployee);
+        Employee newEmployee1 = new Employee("Mary","Poppin", 40, 50000);
+        testObject.addNewEmployee(newEmployee1);
+        Employee newEmployee2 = new Employee("Tim","Tom",35,35000);
+        testObject.addNewEmployee(newEmployee2);
+        double actualIndividualRaise = testObject.salaryRaiseForIndividual(10,1);
+        assertEquals(5000,actualIndividualRaise);
 
     }
 }
