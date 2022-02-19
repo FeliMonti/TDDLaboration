@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class EmployeeSystem {
 
@@ -16,13 +17,23 @@ public class EmployeeSystem {
         this.employeeList.remove(newEmployee);
     }
 
-    public double salaryYearlyIncrement(double incrementInPercentage) {
+    public double yearlySalaryIncrement(double incrementInPercentage) {
         float salary = 35000;
         double newSalary = salary * incrementInPercentage / 100;
         return newSalary;
     }
 
-    public void salaryRaiseForIndividual() {
-
+    public double individualSalaryRaise(double incrementInPercentage, int ID) {
+        for (int i = 0; i < employeeList.size(); i++) {
+            System.out.println(employeeList.get(i).getFirstName() + " " + employeeList.get(i).getLastName() +
+                 " " + employeeList.get(i).getSalary());
+        }
+        double salary = employeeList.get(1).getSalary();
+        double newIndividualSalary = salary * incrementInPercentage / 100;
+        return newIndividualSalary;
     }
 }
+
+
+
+
