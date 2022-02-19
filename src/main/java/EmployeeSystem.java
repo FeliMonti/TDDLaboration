@@ -1,9 +1,9 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class EmployeeSystem {
 
     private ArrayList<Employee> employeeList = new ArrayList<>();
+    //private ArrayList<Employee> salaries = new ArrayList<>();
 
     public void addNewEmployee(Employee newEmployee){
         this.employeeList.add(newEmployee);
@@ -17,23 +17,26 @@ public class EmployeeSystem {
         this.employeeList.remove(newEmployee);
     }
 
-    public double yearlySalaryIncrement(double incrementInPercentage) {
-        float salary = 35000;
-        double newSalary = salary * incrementInPercentage / 100;
-        return newSalary;
+   public double yearlySalaryIncrement(double incrementInPercentage) {
+        float newSalary = 35000;
+        return newSalary * incrementInPercentage / 100;
     }
 
     public double individualSalaryRaise(double incrementInPercentage, int ID) {
-        for (int i = 0; i < employeeList.size(); i++) {
-            System.out.println(employeeList.get(i).getFirstName() + " " + employeeList.get(i).getLastName() +
-                 " " + employeeList.get(i).getSalary());
+        for (Employee employee : employeeList) {
+            System.out.println(employee.getFirstName() + " " + employee.getLastName() +
+                    " " + employee.getSalary());
         }
-        double salary = employeeList.get(1).getSalary();
-        double newIndividualSalary = salary * incrementInPercentage / 100;
-        return newIndividualSalary;
+        double newIndividualSalary = employeeList.get(ID).getSalary();
+        return newIndividualSalary * incrementInPercentage / 100;
+
     }
 }
 
-
+/* Alternativ for loop....
+    for (int i = 0; i < employeeList.size(); i++) {
+            System.out.println(employeeList.get(i).getFirstName() + " " + employeeList.get(i).getLastName() +
+                 " " + employeeList.get(i).getSalary());
+        }*/
 
 
