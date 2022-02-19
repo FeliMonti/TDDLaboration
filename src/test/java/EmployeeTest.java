@@ -34,15 +34,17 @@ public class EmployeeTest {
 
     @Test
     public void getIDTest(){
-        int actual = testObject.getID();
-        assertEquals(1,actual);
+        Employee testObject = new Employee("Feli","Monti",25,38000);
+        Employee testObject2 = new Employee("Minnie","Mouse",22,28000);
+        int actual = testObject2.getID();
+        int expected = testObject.getID()+1;
+        assertEquals(expected,actual);
     }
 
     @Test
     public void getIDIncrementTest(){
         int actual = testObject2.getID();
-        assertEquals(2,actual);
-        assertNotEquals(testObject.getID(),testObject2.getID());
+        assertNotEquals(testObject.getID(),actual);
     }
 
     @Test
