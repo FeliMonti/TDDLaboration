@@ -63,7 +63,7 @@ public class EmployeeSystemTest {
         testObject.addNewEmployee(newEmployee2);
         ArrayList<Employee> newEmployed = testObject.getNewEmployee();
         testObject.yearlySalaryIncrement(10);
-        assertEquals(35000,newEmployed.get(2).getSalary());
+        assertEquals(38500,newEmployed.get(2).getSalary());
 
     }
 
@@ -76,8 +76,8 @@ public class EmployeeSystemTest {
         Employee newEmployee2 = new Employee("Tim","Tom",35,35000);
         testObject.addNewEmployee(newEmployee2);
         ArrayList<Employee> newEmployed = testObject.getNewEmployee();
-        testObject.individualSalaryRaise(101,2);
-        assertEquals(50000,newEmployed.get(1).getSalary());
+        testObject.individualSalaryRaise(10,newEmployee.getID()); // ID = 1 är hårdkodat (icke bra)
+        assertEquals(44000,newEmployed.get(0).getSalary());
 
     }
 }
