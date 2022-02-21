@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class EmployeeSystem {
 
     private ArrayList<Employee> employeeList = new ArrayList<>();
-    //private ArrayList<Employee> salaries = new ArrayList<>();
 
     public void addNewEmployee(Employee newEmployee) {
         this.employeeList.add(newEmployee);
@@ -36,13 +35,13 @@ public class EmployeeSystem {
         }
         if (incrementInPercentage > 0 && incrementInPercentage <= 100) {
             for (int i = 0; i < employeeList.size(); i++) {
-                Employee newEmployee = employeeList.get(i);
-                if (ID == newEmployee.getID()) {
+                //Employee newEmployee = employeeList.get(i);
+                if (ID == employeeList.get(i).getID()) {
                     newIndividualSalary = employeeList.get(i).getSalary() +
-                            employeeList.get(i).getSalary() * (incrementInPercentage / 100);
+                                employeeList.get(i).getSalary() * (incrementInPercentage / 100);
                     employeeList.get(i).setSalary(newIndividualSalary);
+                    }
                 }
-            }
         }
     }
 }
