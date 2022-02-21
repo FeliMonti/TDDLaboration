@@ -55,8 +55,16 @@ public class EmployeeSystemTest {
 
     @Test
     public void yearlySalaryIncrementTest(){
-        double actualIncrement = testObject.yearlySalaryIncrement(10);
-        assertEquals(3500,actualIncrement);
+        Employee newEmployee = new Employee("Samantha","Tester", 33, 40000);
+        testObject.addNewEmployee(newEmployee);
+        Employee newEmployee1 = new Employee("Mary","Poppin", 40, 50000);
+        testObject.addNewEmployee(newEmployee1);
+        Employee newEmployee2 = new Employee("Tim","Tom",35,35000);
+        testObject.addNewEmployee(newEmployee2);
+        ArrayList<Employee> newEmployed = testObject.getNewEmployee();
+        testObject.yearlySalaryIncrement(10);
+        assertEquals(35000,newEmployed.get(2).getSalary());
+
     }
 
     @Test
@@ -67,8 +75,9 @@ public class EmployeeSystemTest {
         testObject.addNewEmployee(newEmployee1);
         Employee newEmployee2 = new Employee("Tim","Tom",35,35000);
         testObject.addNewEmployee(newEmployee2);
-        double actualIndividualRaise = testObject.individualSalaryRaise(10,1);
-        assertEquals(5000,actualIndividualRaise);
+        ArrayList<Employee> newEmployed = testObject.getNewEmployee();
+        testObject.individualSalaryRaise(10,1);
+        assertEquals(35000,newEmployed.get().getSalary());
 
     }
 }
