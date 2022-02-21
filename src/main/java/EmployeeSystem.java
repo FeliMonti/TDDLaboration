@@ -5,7 +5,7 @@ public class EmployeeSystem {
     private ArrayList<Employee> employeeList = new ArrayList<>();
     //private ArrayList<Employee> salaries = new ArrayList<>();
 
-    public void addNewEmployee(Employee newEmployee){
+    public void addNewEmployee(Employee newEmployee) {
         this.employeeList.add(newEmployee);
     }
 
@@ -17,22 +17,35 @@ public class EmployeeSystem {
         this.employeeList.remove(newEmployee);
     }
 
-   public double yearlySalaryIncrement(double incrementInPercentage) {
-        float newSalary = 35000;
-        return newSalary * incrementInPercentage / 100;
+    public void yearlySalaryIncrement(float incrementInPercentage) {
+        float newSalary;
+        if (incrementInPercentage > 0 && incrementInPercentage <= 100) {
+            for (int i = 0; i < employeeList.size(); i++) {
+                newSalary = employeeList.get(i).getSalary() +
+                        employeeList.get(i).getSalary() * (incrementInPercentage / 100);
+                employeeList.get(i).setSalary(newSalary);
+            }
+        }
     }
 
-    public double individualSalaryRaise(double incrementInPercentage, int ID) {
+    public void individualSalaryRaise(float incrementInPercentage, int ID) {
+        float newIndividualSalary;
         for (Employee employee : employeeList) {
             System.out.println(employee.getFirstName() + " " + employee.getLastName() +
                     " " + employee.getSalary());
         }
-        double newIndividualSalary = employeeList.get(ID).getSalary();
-        return newIndividualSalary * incrementInPercentage / 100;
-
+        if (incrementInPercentage > 0 && incrementInPercentage <= 100) {
+            for (int i = 0; i < employeeList.size(); i++) {
+                Employee newEmployee = employeeList.get(i);
+                if (ID == newEmployee.getID()) {
+                    newIndividualSalary = employeeList.get(i).getSalary() +
+                            employeeList.get(i).getSalary() * (incrementInPercentage / 100);
+                    employeeList.get(i).setSalary(newIndividualSalary);
+                }
+            }
+        }
     }
 }
-
 /* Alternativ for loop....
     for (int i = 0; i < employeeList.size(); i++) {
             System.out.println(employeeList.get(i).getFirstName() + " " + employeeList.get(i).getLastName() +

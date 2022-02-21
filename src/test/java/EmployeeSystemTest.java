@@ -76,8 +76,8 @@ public class EmployeeSystemTest {
         Employee newEmployee2 = new Employee("Tim","Tom",35,35000);
         testObject.addNewEmployee(newEmployee2);
         ArrayList<Employee> newEmployed = testObject.getNewEmployee();
-        testObject.individualSalaryRaise(10,1);
-        assertEquals(35000,newEmployed.get().getSalary());
+        testObject.individualSalaryRaise(101,2);
+        assertEquals(50000,newEmployed.get(1).getSalary());
 
     }
 }
